@@ -1,13 +1,10 @@
-﻿namespace AssemblerBackend;
+﻿namespace Intel8080Tools.Assembler;
 
 public enum Rp : byte
 {
     BC = 0b00,
-    B = 0b00,
     DE = 0b01,
-    D = 0b01,
     HL = 0b10,
-    H = 0b10,
     SP = 0b11
 }
 

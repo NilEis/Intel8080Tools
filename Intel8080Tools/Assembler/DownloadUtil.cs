@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 public static class DownloadUtil
 {

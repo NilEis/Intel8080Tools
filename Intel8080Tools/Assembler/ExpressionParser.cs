@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using Sprache;
 
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 internal static class ExpressionParser
 {

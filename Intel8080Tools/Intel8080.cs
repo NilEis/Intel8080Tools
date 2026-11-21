@@ -2,10 +2,9 @@
 
 using System.Data;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using System.Text;
-using AssemblerBackend;
+using Intel8080Tools.Assembler;
 
 namespace Intel8080Tools;
 
@@ -1236,34 +1235,36 @@ public class Intel8080
 
     public static void RunTestSuite(bool cacheFile = false, bool print_debug = false)
     {
-        byte[] f;
-        if (DownloadUtil.GetFileBytesCached(cacheFile, "cpudiag.bin", "http://www.emulator101.com/files/cpudiag.bin", out f))
+        if (!DownloadUtil.GetFileBytesCached(cacheFile, "cpudiag.bin", "http://www.emulator101.com/files/cpudiag.bin",
+                out var f))
         {
-            var testCpu = new Intel8080().LoadMemory(f, 0x100)
-                .LoadMemory([0xc3, 0x00, 0x01], 0)
-                .LoadMemory([0x07], 368);
-            do
-            {
-                /* on error:
-                 * 0x00C5: CALL 0x689
-                 * 0x0589: LXI HL, 0x018B
-                 * 0x058C: CALL 0x145
-                 * 0x0045: PUSH DE
-                 * 0x0046: XCHG
-                 * 0x0047: MVI C, 0x09
-                 * 0x0049: CALL 0x5
-                 */
-                if (testCpu.PC != 0x689)
-                {
-                    continue;
-                }
-
-                Console.Out.WriteLine("ERROR IN PREV INSTR");
-                while (true)
-                {
-                }
-            } while (testCpu.run(true, false, print_debug).Item1);
+            return;
         }
+
+        var testCpu = new Intel8080().LoadMemory(f, 0x100)
+            .LoadMemory([0xc3, 0x00, 0x01], 0)
+            .LoadMemory([0x07], 368);
+        do
+        {
+            /* on error:
+             * 0x00C5: CALL 0x689
+             * 0x0589: LXI HL, 0x018B
+             * 0x058C: CALL 0x145
+             * 0x0045: PUSH DE
+             * 0x0046: XCHG
+             * 0x0047: MVI C, 0x09
+             * 0x0049: CALL 0x5
+             */
+            if (testCpu.PC != 0x689)
+            {
+                continue;
+            }
+
+            Console.Out.WriteLine("ERROR IN PREV INSTR");
+            while (true)
+            {
+            }
+        } while (testCpu.run(true, false, print_debug).Item1);
     }
 
     public string GetCurrentInstrAsString()

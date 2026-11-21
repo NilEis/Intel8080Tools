@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 class DebugInfo
 {

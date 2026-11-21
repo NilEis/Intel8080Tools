@@ -1,6 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
-
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 public class MemoryBuffer<T>
 {

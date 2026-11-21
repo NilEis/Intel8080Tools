@@ -4,11 +4,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel8080Tools", "Intel8080
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{C780FEE8-0A02-468F-B87B-C368360792C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblerBackend", "AssemblerBackend\AssemblerBackend.csproj", "{C9F3399C-BB6A-4294-A75A-EBEF4B5176DC}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assembler", "Assembler", "{6AC3A726-A9A5-47CA-A379-64556B7874B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembler", "Assembler\Assembler.csproj", "{F25B22F2-B13E-4EC4-9D08-C68821A0F109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblerTest", "AssemblerTest\AssemblerTest.csproj", "{885585BA-3A41-4DE7-98F3-3CA2F5F5B891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,17 +24,16 @@ Global
 		{C780FEE8-0A02-468F-B87B-C368360792C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C780FEE8-0A02-468F-B87B-C368360792C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C780FEE8-0A02-468F-B87B-C368360792C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9F3399C-BB6A-4294-A75A-EBEF4B5176DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9F3399C-BB6A-4294-A75A-EBEF4B5176DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9F3399C-BB6A-4294-A75A-EBEF4B5176DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9F3399C-BB6A-4294-A75A-EBEF4B5176DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F25B22F2-B13E-4EC4-9D08-C68821A0F109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F25B22F2-B13E-4EC4-9D08-C68821A0F109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F25B22F2-B13E-4EC4-9D08-C68821A0F109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F25B22F2-B13E-4EC4-9D08-C68821A0F109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{885585BA-3A41-4DE7-98F3-3CA2F5F5B891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885585BA-3A41-4DE7-98F3-3CA2F5F5B891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885585BA-3A41-4DE7-98F3-3CA2F5F5B891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885585BA-3A41-4DE7-98F3-3CA2F5F5B891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C9F3399C-BB6A-4294-A75A-EBEF4B5176DC} = {6AC3A726-A9A5-47CA-A379-64556B7874B6}
 		{F25B22F2-B13E-4EC4-9D08-C68821A0F109} = {6AC3A726-A9A5-47CA-A379-64556B7874B6}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
-using AssemblerBackend;
 using Intel8080Tools;
+using Intel8080Tools.Assembler;
 
 Intel8080.RunTestSuite(true);
 const string input = """
@@ -36,11 +36,12 @@ const string input = """
                      resq 4
                      """;
 
-Debug.Assert(DownloadUtil.GetFileStringCached(true, "cpudiag.asm", "http://www.emulator101.com/files/cpudiag.asm",
+Debug.Assert(DownloadUtil.GetFileStringCached(true, "cpudiag.asm", "https://web.archive.org/web/20240407080334id_/http://www.emulator101.com/files/cpudiag.asm",
     out var str));
+str = str.Replace("TEMP2\tDS\t1", "TEMP2:\tDS\t1");
 
 
-if (Assembler.Assemble(input, out var b))
+if (Assembler.Assemble(str, out var b))
 {
     uint c = 0;
     ushort p = 0;

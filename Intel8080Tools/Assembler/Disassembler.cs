@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 public static class Disassembler
 {

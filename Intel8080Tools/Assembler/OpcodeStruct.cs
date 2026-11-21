@@ -1,8 +1,7 @@
 using System.Collections.Immutable;
-using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
 
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 public static class OpcodeClass
 {

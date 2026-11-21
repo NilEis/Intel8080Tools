@@ -1,4 +1,4 @@
-﻿using AssemblerBackend;
+﻿using Intel8080Tools.Assembler;
 
 namespace Assembler;
 
@@ -12,7 +12,7 @@ internal static class Assembler
         {
             BuildCmd((output, input) =>
             {
-                if (AssemblerBackend.Assembler.Assemble(File.ReadAllText(input.FullName), out var mem))
+                if (Intel8080Tools.Assembler.Assembler.Assemble(File.ReadAllText(input.FullName), out var mem))
                 {
                     File.WriteAllBytes(output.FullName, mem);
                 }

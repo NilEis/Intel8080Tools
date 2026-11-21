@@ -1,6 +1,6 @@
 using Sprache;
 
-namespace AssemblerBackend;
+namespace Intel8080Tools.Assembler;
 
 public static class Parser
 {
